@@ -8,7 +8,7 @@ const QUESTIONS = [
     q: "Lundi 8h27. <span class='hi'>Denfert-Rochereau</span> t'attend. Comment tu rejoins la banque&nbsp;?",
     hint: "Épisode 1 · Le trajet du matin",
     options: [
-      { txt: "Vélib arc-en-ciel jusqu'à la Défense, mollets en feu", tags: ["velo", "energie"] },
+      { txt: "Vélib arc-en-ciel jusqu'au travail, mollets en feu", tags: ["velo", "energie"] },
       { txt: "Ligne 6 aérienne, podcast crypto dans les oreilles", tags: ["classique", "banque"] },
       { txt: "À pied dans le parc Montsouris, café à emporter", tags: ["contempo", "nature"] },
       { txt: "En courant : j'ai encore optimisé mes 3 alarmes", tags: ["energie", "banque"] }
