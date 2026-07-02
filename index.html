@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b0b1a" />
+  <title>Quel type de galette es-tu ?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mesh">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main class="app">
+    <!-- INTRO -->
+    <section class="screen intro is-active" id="screen-intro">
+      <div class="badge">
+        <span class="dot"></span>
+        <span>Quizz de personnalité · 2026</span>
+      </div>
+      <h1 class="title">
+        Quel type de <span class="grad">galette</span> es-tu&nbsp;?
+      </h1>
+      <p class="subtitle">
+        5 questions pour dévoiler ta vraie nature crêpière.<br />
+        Sois honnête. Le beurre salé le sera aussi.
+      </p>
+      <button class="cta" id="start-btn">
+        <span>Commencer le quizz</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <div class="chips">
+        <span>🥞 6 profils</span>
+        <span>⏱ 60 secondes</span>
+        <span>🧈 100% beurre salé</span>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="screen quiz" id="screen-quiz">
+      <div class="quiz-head">
+        <div class="progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-info">
+          <span id="q-index">1</span><span class="muted"> / 5</span>
+        </div>
+      </div>
+
+      <div class="q-wrap" id="q-wrap">
+        <!-- injected -->
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="screen result" id="screen-result">
+      <div class="reveal">
+        <div class="result-eyebrow">Ton profil crêpier</div>
+        <div class="result-emoji" id="result-emoji">🥞</div>
+        <h2 class="result-title" id="result-title">La Galette</h2>
+        <p class="result-desc" id="result-desc"></p>
+
+        <div class="result-cards">
+          <div class="rcard">
+            <div class="rcard-label">Superpouvoir</div>
+            <div class="rcard-value" id="result-power">—</div>
+          </div>
+          <div class="rcard">
+            <div class="rcard-label">Cuisson idéale</div>
+            <div class="rcard-value" id="result-cook">—</div>
+          </div>
+          <div class="rcard">
+            <div class="rcard-label">Accord parfait</div>
+            <div class="rcard-value" id="result-pair">—</div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="cta" id="restart-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+            <span>Refaire le quizz</span>
+          </button>
+          <button class="cta cta-ghost" id="share-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
+            <span id="share-label">Partager</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Fait avec 🧈 depuis le 14e</span>
+  </footer>
+
+  <canvas id="confetti"></canvas>
+
+  <script src="quiz.js" defer></script>
+</body>
+</html>
